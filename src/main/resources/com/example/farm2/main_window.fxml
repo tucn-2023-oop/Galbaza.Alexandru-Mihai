@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.farm2.Controllers.MainWindowController">
+    <center>
+        <VBox spacing="10" alignment="center">
+            <Label text="Main Window" style="-fx-font-size: 20px;"/>
+            <Button text="Log Out" onAction="#handleLogoutButton"/>
+            <Button text="Display Livestock" onAction="#handleDisplayLivestockButton"/>
+            <Button text="Buy/Sell Livestock" onAction="#handleBuyLivestockButton"/>
+            <Button text="Leaderboards" onAction="#handleLeaderboardsButton"/>  <!-- Add Leaderboards button -->
+            <Button text="Go Premium!" style="-fx-background-color: linear-gradient(to bottom, #FFD700, #FFA500); -fx-font-size: 14px;" onAction="#handleGoPremiumButton"/>
+        </VBox>
+    </center>
+</BorderPane>

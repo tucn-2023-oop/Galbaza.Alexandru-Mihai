@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.farm2.Controllers.PremiumAdvertisementController"
+      spacing="10" alignment="CENTER">
+    <Label text="Exclusive Offer!" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label text="50% OFF Premium Features" style="-fx-font-size: 18px;"/>
+    <Label text="Unlock amazing features like:" style="-fx-font-weight: bold; -fx-fill: #008000;"/>
+    <Label text="Farming in Space!" style="-fx-font-weight: bold; -fx-fill: #008000;"/>
+    <Label text="A ticket to Ram Ranch!" style="-fx-font-weight: bold; -fx-fill: #008000;"/>
+    <Label text="Management of cow's farts!" style="-fx-font-weight: bold; -fx-fill: #008000;"/>
+    <Label text="Much more shiet!" style="-fx-font-weight: bold; -fx-fill: #008000;"/>
+    <Button text="Claim Now!" style="-fx-background-color: linear-gradient(to bottom, #FFD700, #FFA500); -fx-font-size: 16px;" onAction="#handleClaimNowButton"/>
+</VBox>

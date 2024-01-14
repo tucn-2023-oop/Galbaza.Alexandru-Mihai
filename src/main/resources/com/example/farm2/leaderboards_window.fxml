@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.farm2.Controllers.LeaderboardsController">
+    <center>
+        <VBox spacing="10" alignment="center">
+            <Label text="Leaderboards" style="-fx-font-size: 20px;"/>
+            <TableView fx:id="leaderboardsTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn text="Farmer Name" fx:id="nameColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="farmerName"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Livestock Count" fx:id="livestockColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="livestockCount"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Poultry Count" fx:id="poultryColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="poultryCount"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Equine Count" fx:id="equinesColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="equineCount"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Misc Count" fx:id="miscColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="miscCount"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Total Count" fx:id="totalColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="totalCount"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+            <Label fx:id="crownLabel" style="-fx-font-size: 18px;"/>  <!-- Add the crown label -->
+        </VBox>
+    </center>
+</BorderPane>

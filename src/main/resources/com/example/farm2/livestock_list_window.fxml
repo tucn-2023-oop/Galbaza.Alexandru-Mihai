@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.ComboBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.farm2.Controllers.LivestockListController">
+    <Label text="Livestock List" style="-fx-font-size: 20px;"/>
+
+    <!-- Add ComboBox for selecting Livestock type -->
+    <ComboBox fx:id="typeComboBox" promptText="Select Type" onAction="#handleTypeSelection"/>
+
+    <TableView fx:id="livestockTableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Name" fx:id="nameColumn" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="livestockName"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Type" fx:id="typeColumn" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="type"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Quantity" fx:id="quantityColumn" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="quantity"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.farm2.Controllers.BuyLivestockController">
+    <Label text="Manage livestock" style="-fx-font-size: 20px;"/>
+    <GridPane>
+        <Label text="Livestock Name:" GridPane.columnIndex="0"/>
+        <TextField fx:id="livestockNameField" GridPane.columnIndex="1"/>
+    </GridPane>
+    <GridPane>
+        <Label text="Type: (Livestock, Poultry, Equines, Misc)" GridPane.columnIndex="0"/>
+        <TextField fx:id="typeField" GridPane.columnIndex="1"/>
+    </GridPane>
+    <GridPane>
+        <Label text="Quantity:" GridPane.columnIndex="0"/>
+        <TextField fx:id="quantityField" GridPane.columnIndex="1"/>
+    </GridPane>
+    <Button text="Buy" onAction="#handleBuyButton"/>
+    <Button text="Sell" onAction="#handleSellButton"/>
+</VBox>

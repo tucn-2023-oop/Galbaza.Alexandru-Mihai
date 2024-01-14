@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.farm2.Controllers.FarmerLoginController">
+    <center>
+        <VBox spacing="10" alignment="center">
+            <Label text="Farmer Login" style="-fx-font-size: 20px;"/>
+            <GridPane>
+                <Label text="Username:"/>
+                <TextField fx:id="usernameField"/>
+            </GridPane>
+            <GridPane>
+                <Label text="Password:"/>
+                <PasswordField fx:id="passwordField"/>
+            </GridPane>
+            <Button text="Login" onAction="#handleLoginButton"/>
+        </VBox>
+    </center>
+</BorderPane>
