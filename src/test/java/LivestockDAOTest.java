@@ -1,5 +1,3 @@
-package src.main.java;
-
 import com.example.farm2.Classes.FarmerLeaderboardEntry;
 import com.example.farm2.Classes.Livestock;
 import com.example.farm2.DAO.LivestockDAO;
