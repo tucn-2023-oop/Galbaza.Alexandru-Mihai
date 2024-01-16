@@ -2,21 +2,20 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.farm2.Controllers.FarmerLoginController">
-    <center>
-        <VBox spacing="10" alignment="center">
-            <Label text="Farmer Login" style="-fx-font-size: 20px;"/>
-            <GridPane>
-                <Label text="Username:"/>
-                <TextField fx:id="usernameField"/>
-            </GridPane>
-            <GridPane>
-                <Label text="Password:"/>
-                <PasswordField fx:id="passwordField"/>
-            </GridPane>
-            <Button text="Login" onAction="#handleLoginButton"/>
-        </VBox>
-    </center>
-</BorderPane>
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.farm2.Controllers.FarmerLoginController">
+    <!-- This VBox is like a container holding your elements, aligned in the center, and spaced 10 units apart -->
+    <Label text="Farmer Login" />
+
+    <Label text="Username:" /> <!-- A simple label -->
+
+    <TextField fx:id="usernameField" promptText="Enter your username" /> <!-- A text field, fx:id is used to reference it in the controller -->
+
+    <Label text="Password:" />
+
+    <PasswordField fx:id="passwordField" promptText="Enter your password" /> <!-- Another text field, this time for passwords -->
+
+    <Button text="Login" onAction="#handleLoginButton" /> <!-- A button, onAction is used to link it to a method in the controller -->
+
+</VBox>

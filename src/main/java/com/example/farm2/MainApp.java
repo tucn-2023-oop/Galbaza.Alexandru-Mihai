@@ -15,18 +15,18 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/farm2/farmer_login.fxml"));
-            Scene scene = new Scene(loader.load());
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/farm2/farmer_login.fxml"));//get the resources
+            Scene scene = new Scene(loader.load());//Prepping the scene for show
 
-            primaryStage.setTitle("Farm Management App");
-            primaryStage.setScene(scene);
-            primaryStage.show();
+            primaryStage.setTitle("Farm Management App");//Set the title
+            primaryStage.setScene(scene);//telling the computer which "curtains to open"
+            primaryStage.show();//You are shown the tab
 
-            FarmerLoginController farmerLoginController = loader.getController();
-            farmerLoginController.setPrimaryStage(primaryStage);
+            FarmerLoginController farmerLoginController = loader.getController(); //The actual controller of the tab is not this one, but the farmerLoginController
+            farmerLoginController.setPrimaryStage(primaryStage);//
         } catch (IOException e) {
             e.printStackTrace();
-            exit(0);
+
         }
     }
 

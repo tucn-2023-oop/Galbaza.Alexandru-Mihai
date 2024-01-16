@@ -26,16 +26,16 @@ public class FarmerLoginController {
         this.primaryStage = primaryStage;
     }
 
-    @FXML
+    @FXML//this one handles a button! Fancy!
     private void handleLoginButton() {
-        String username = usernameField.getText();
+        String username = usernameField.getText();//here it does the logic
         String password = passwordField.getText();
 
         FarmerDAO farmersDAO = new FarmerDAO();
         Farmer authenticatedFarmer = farmersDAO.authenticateUser(username, password);
 
         if (authenticatedFarmer != null) {
-            openMainWindow(authenticatedFarmer);
+            openMainWindow(authenticatedFarmer);//here it opens a new window!
         } else {
             openErrorWindow("Invalid username or password.");
         }

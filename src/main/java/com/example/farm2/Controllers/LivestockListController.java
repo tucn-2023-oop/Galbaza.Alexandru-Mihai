@@ -47,6 +47,7 @@ public class LivestockListController {
 
         // Populate the typeComboBox with distinct types
         List<String> distinctTypes = new ArrayList<>();
+        distinctTypes.add("No filter active");
         distinctTypes.add("Livestock");
         distinctTypes.add("Poultry");
         distinctTypes.add("Equines");
@@ -63,7 +64,7 @@ public class LivestockListController {
         ObservableList<Livestock> filteredLivestock = FXCollections.observableArrayList();
         List<Livestock> allLivestock = livestockDAO.getAllLivestockByFarmerId(loggedInFarmer.getFarmerId());
 
-        if (selectedType == null || selectedType.isEmpty()) {
+        if (selectedType == null || selectedType.equals("No filter active") || selectedType.isEmpty()) {
             // If no type selected, show all livestock
             filteredLivestock.addAll(allLivestock);
         } else {

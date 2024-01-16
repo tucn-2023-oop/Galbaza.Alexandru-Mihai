@@ -5,14 +5,17 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.farm2.Controllers.MainWindowController">
+
     <center>
-        <VBox spacing="10" alignment="center">
-            <Label text="Main Window" style="-fx-font-size: 20px;"/>
-            <Button text="Log Out" onAction="#handleLogoutButton"/>
-            <Button text="Display Livestock" onAction="#handleDisplayLivestockButton"/>
-            <Button text="Buy/Sell Livestock" onAction="#handleBuyLivestockButton"/>
-            <Button text="Leaderboards" onAction="#handleLeaderboardsButton"/>  <!-- Add Leaderboards button -->
-            <Button text="Go Premium!" style="-fx-background-color: linear-gradient(to bottom, #FFD700, #FFA500); -fx-font-size: 14px;" onAction="#handleGoPremiumButton"/>
+        <VBox spacing="20" alignment="center">
+            <Label text="Main Window" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #006400;"/>
+
+            <Button text="Log Out" style="-fx-font-size: 18px;" onAction="#handleLogoutButton"/>
+            <Button text="Display Livestock" style="-fx-font-size: 18px;" onAction="#handleDisplayLivestockButton"/>
+            <Button text="Buy/Sell Livestock" style="-fx-font-size: 18px;" onAction="#handleBuyLivestockButton"/>
+            <Button text="Leaderboards" style="-fx-font-size: 18px;" onAction="#handleLeaderboardsButton"/>
+
+            <Button text="Go Premium!" style="-fx-background-color: linear-gradient(to bottom, #FFD700, #FFA500); -fx-font-size: 22px; -fx-font-weight: bold;" onAction="#handleGoPremiumButton"/>
         </VBox>
     </center>
 </BorderPane>
